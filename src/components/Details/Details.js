@@ -28,10 +28,10 @@ const Details = (props) => {
 
             </div> */}
             {/* Show friends dinamically */}
-            <div class="card mb-3" style={{ "max-width": "540px" }}>
+            <div class="card mb-3 " style={{ "max-width": "540px" }}>
 
 
-                <img src={img} class="img-fluid rounded-start" alt="..." />
+                <img src={img} class="img-fluid rounded-start w-75" alt="..." />
 
                 <div class="col-md-8">
                     <div class="card-body">
@@ -39,8 +39,11 @@ const Details = (props) => {
                         <p class="card-text">Dep_{dep}</p>
                         <p class="card-text">Id_{id}</p>
                         <p class="card-text"><small class="text-muted">Given_{taka}</small></p>
+                        <p><i class="fab fa-whatsapp"> </i> <i class="fab fa-instagram"></i> <i class="fab fa-facebook-f"></i>
+                        </p>
                         <button onClick={() => props.handleAddToCart(props.friend)}
                             className="btn btn-secondary"> <i class="fas fa-dollar-sign"></i> Add Money</button>
+
                     </div>
                 </div>
 

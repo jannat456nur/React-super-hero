@@ -36,7 +36,7 @@ const Friends = () => {
             {/* friends container */}
             <div className="col-md-11">
                 <div className="product-container row">
-                    <h3>Friends:{friends.length}</h3>
+                    {/* <h3>Friends:{friends.length}</h3> */}
                     {
                         friends.map(friend => <Details
                             // key={friend.id}

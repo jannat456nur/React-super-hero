@@ -6,7 +6,7 @@ import './Details.css'
 const Details = (props) => {
     // console.log(props.details.name)
     //destructuring
-    const { name, id, dep, img, taka } = props.details;
+    const { name, id, dep, img, taka } = props.details || {};
 
     return (
         //dynamically card menupulation
@@ -22,9 +22,9 @@ const Details = (props) => {
                         <p className="card-text">Dep_{dep}</p>
                         <p className="card-text">Id_{id}</p>
                         <p className="card-text"><small className="text-muted">Given_{taka}</small></p>
-                        <p><i className="fab fa-whatsapp"> </i> <i className="fab fa-instagram"></i> <i className="fab fa-facebook-f"></i>
-                        </p>
-                        <button onClick={() => props.handleAddToCart(props.friend)}
+                        <p><i className="fab fa-whatsapp"> </i> <i className="fab fa-instagram"></i> <i className="fab fa-facebook-f"></i></p>
+
+                        <button onClick={() => props.handleAddToCart(props.details)}
                             className="btn btn-secondary"> <i className="fas fa-dollar-sign"></i> Add Money</button>
 
                     </div>

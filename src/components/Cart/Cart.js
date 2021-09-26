@@ -2,12 +2,15 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = props => {
-    const { card } = props;
+    console.log(props.cart)
+    const { cart } = props;
     //Total calculation
     let total = 0;
-    for (const friend of card) {
-        // console.log(friend)
-        total = total + friend?.taka;
+    let nameF = [];
+    for (const friend of cart) {
+        console.log(friend)
+        total = parseFloat(total) + friend?.taka;
+        nameF = nameF + friend?.name;
         // console.log(total)
     }
     // const totalReducer = (previous, friend) = previous + friend.price;
@@ -15,9 +18,9 @@ const Cart = props => {
     return (
         <div>
 
-            <h3 className="px-4">Total:{props.card.length}</h3>
+            <h3 className="px-4">Total:{props.cart.length}</h3>
             <h4 className="px-4">Total amount:<i className="fas fa-dollar-sign"></i>{total.toFixed(2)}</h4>
-            <h6 className="px-4">{props.name}</h6>
+            <h6 className="px-4">{nameF}</h6>
         </div>
     );
 };

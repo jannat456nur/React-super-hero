@@ -35,7 +35,7 @@ const Friends = () => {
             {/* Cart container */}
 
             <div className="col-mc-1">
-                <Cart card={cart}></Cart>
+                <Cart cart={cart}></Cart>
             </div>
 
             {/* friends container */}

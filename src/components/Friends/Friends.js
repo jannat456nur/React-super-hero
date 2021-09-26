@@ -6,6 +6,7 @@ import './Friends.css'
 const Friends = () => {
     const [friends, setFriends] = useState([])
     const [cart, setCart] = useState([])
+    // const [cart, setCart] = useState([])
     useEffect(() => {
         fetch('./friends.JSON')
             .then(res => res.json())
@@ -13,28 +14,34 @@ const Friends = () => {
     }, [])
 
     const handleAddToCart = friend => {
-        console.log(friends.name)
+        // console.log(friend?.taka)
         const newCart = [...cart, friend]
         setCart(newCart)
     }
+
+    // const handleAddToCard = product => {
+    //     console.log(product.name)
+    //     const newCart = [...cart, product]
+    //     setCart(newCart)
+    // }
     return (
-        <div className="friends-container">
-            <div className="cart-container">
-                <Cart cart={cart}></Cart>
+        <div className="row">
+            <div className="col-mc-1">
+                <Cart card={cart}></Cart>
             </div>
-            <div className="details-container">
-                <h3>rfghg:{friends.length}</h3>
-                {
-                    friends.map(friend => <Details
-                        id={friend.key}
-                        details={friend}
-                        handleAddToCart={handleAddToCart}
-                    ></Details>)
-                }
+            <div className="col-md-11">
+                <div className="product-container row">
+                    <h3>Friends:{friends.length}</h3>
+                    {
+                        friends.map(friend => <Details
+                            // key={friend.id}
+                            details={friend}
+                            handleAddToCart={handleAddToCart}
+                        ></Details>)
+                    }
+                </div>
+
             </div>
-            {/* <div className="cart-container">
-                <Cart cart={cart}></Cart>
-            </div> */}
         </div>
     );
 };

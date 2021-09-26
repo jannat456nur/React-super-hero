@@ -1,27 +1,49 @@
 
 import React from 'react';
-import Cart from '../Cart/Cart';
 import './Details.css'
 
+
 const Details = (props) => {
+    console.log(props.details.name)
     const { name, id, dep, img, taka } = props.details;
     return (
-        <div className="cart" >
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img className="image" src={img} alt="" />
+        <div className="col-md-4">
+            {/* <div className="col-md-6">
+
+
+                <div class="card h-100">
+                    <img className="image" src={img} alt="" />
+                    <div class="card-body">
+                        <h2>Name:{name}</h2>
+                        <h2>Student Id:{id}</h2>
+                        <h2>Dep:{dep}</h2>
+                        <h2>Amount:{taka}</h2>
+                        <button onClick={() => props.handleAddToCart(props.friend)}
+                        >add to card</button>
+                    </div>
+                </div>
+
+
+            </div> */}
+
+            <div class="card mb-3" style={{ "max-width": "540px" }}>
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src={img} class="img-fluid rounded-start" alt="..." />
+                    </div>
+                    <div class="col-md-8">
                         <div class="card-body">
-                            <h2>Name:{name}</h2>
-                            <h2>Student Id:{id}</h2>
-                            <h2>Dep:{dep}</h2>
-                            <h2>Amount:{taka}</h2>
+                            <h5 class="card-title">{name}</h5>
+                            <p class="card-text">Dep_{dep}</p>
+                            <p class="card-text">Id_{id}</p>
+                            <p class="card-text"><small class="text-muted">Given_{taka}</small></p>
                             <button onClick={() => props.handleAddToCart(props.friend)}
-                            >add to card</button>
+                                className="btn btn-secondary">Add Money</button>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             {/* <img className="image" src={img} alt="" />
             <div class="card-body">

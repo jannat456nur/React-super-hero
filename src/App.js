@@ -1,13 +1,12 @@
 
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import Friends from './components/Friends/Friends';
 
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Header></Header>
       <Friends></Friends>
     </div>

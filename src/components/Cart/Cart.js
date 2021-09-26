@@ -6,11 +6,11 @@ const Cart = props => {
     const { cart } = props;
     //Total calculation
     let total = 0;
-    let nameF = [];
+    let visitor = [];
     for (const friend of cart) {
         console.log(friend)
         total = parseFloat(total) + friend?.taka;
-        nameF = nameF + friend?.name;
+        visitor = visitor + friend?.name;
         // console.log(total)
     }
     // const totalReducer = (previous, friend) = previous + friend.price;
@@ -18,9 +18,10 @@ const Cart = props => {
     return (
         <div>
 
-            <h3 className="px-4">Total:{props.cart.length}</h3>
+            <h3 className="px-4">Total Visitors:{props.cart.length}</h3>
             <h4 className="px-4">Total amount:<i className="fas fa-dollar-sign"></i>{total.toFixed(2)}</h4>
-            <h6 className="px-4">{nameF}</h6>
+            <h6 className="px-4">{visitor}</h6>
+
         </div>
     );
 };

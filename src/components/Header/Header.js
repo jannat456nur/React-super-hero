@@ -37,7 +37,7 @@ const Header = () => {
             </nav>
 
             <h1 className="fs-1 fw-bold text-white px-3"><i className="fas fa-bus"></i> Get toggether </h1>
-            <h3 className="text-white px-3">Total Badget 55 <i className="fas fa-dollar-sign" /> Taka </h3>
+            <h3 className="text-white px-3">Total Badget 5500 <i className="fas fa-dollar-sign" /> Taka </h3>
             <p className="fw-light text-white px-3 pt-0"> Total Friends 15</p>
 
         </div>

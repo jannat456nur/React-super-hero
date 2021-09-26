@@ -1,0 +1,8 @@
+.friends-container{
+    display: flex;
+  justify-content: space-between;
+}
+/* .details-container{
+    background-color: brown;
+    border: 4px solid ;
+} */

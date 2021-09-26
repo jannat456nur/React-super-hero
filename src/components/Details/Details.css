@@ -1,0 +1,20 @@
+/* .friend{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+.image{
+    margin-left: 150px;
+    width: 30%;
+    border: 1px solid;
+    border-radius: 50%;
+}
+/* .cart{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    background-color: cornsilk;
+    border: 3px solid red;
+    grid-gap: 10px;
+} */
+.card-body{
+    /* background-color: chartreuse; */
+}
